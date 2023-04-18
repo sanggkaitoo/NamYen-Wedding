@@ -2,7 +2,7 @@ $(function () {
     function after_form_submitted(data) {
         if (data.result == 'success') {
             $('form#rsvp_form').hide();
-            $('#success_message').show();
+            $('#success_message').fadeIn(1000);
             $('#error_message').hide();
         } else {
             $('#error_message').append('<ul></ul>');
@@ -44,12 +44,12 @@ $(function () {
             type: "POST",
             url: 'writefile.php',
             data: $form.serialize(),
-            success: after_form_submitted,
+            success: after_form_submitted(),
             dataType: 'json'
         });
 
-        $('form#rsvp_form').hide();
-        $('#success_message').fadeIn(500);
+        // $('form#rsvp_form').hide();
+        // $('#success_message').fadeIn(500);
 
     });
 });
