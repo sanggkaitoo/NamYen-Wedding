@@ -39,17 +39,16 @@ $(function () {
             $btn.text('Sending ...');
         });
 
-
         $.ajax({
             type: "POST",
             url: 'writefile.php',
             data: $form.serialize(),
-            success: after_form_submitted(),
+            success: after_form_submitted,
             dataType: 'json'
         });
 
-        // $('form#rsvp_form').hide();
-        // $('#success_message').fadeIn(500);
+        $('form#rsvp_form').hide();
+        $('#success_message').fadeIn(500);
 
     });
 });
