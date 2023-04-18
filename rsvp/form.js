@@ -48,7 +48,7 @@ $(function () {
         });
 
         $('form#rsvp_form').hide();
-        $('#success_message').fadeIn(500);
+        $('#success_message').fadeIn(1000);
 
     });
 });
