@@ -7,11 +7,10 @@
             // Variable declaration
             var error = false;
             var name = $('#name').val();
-            var email = $('#email').val();
+            var which = $('#which').val();
 			var guest = $('#guest').val();
-            var attend = $('#attend').val();
 			
-			$('#name,#email,#guest,#attend').click(function(){
+			$('#name,#which,#guest').click(function(){
 				$(this).removeClass("error_input");
 			});
             
@@ -22,19 +21,13 @@
             }else{
                 $('#name').removeClass("error_input");
             }
-            if(email.length == 0 || email.indexOf('@') == '-1'){
-                var error = true;
-                $('#email').addClass("error_input");
-            }else{
-                $('#email').removeClass("error_input");
-            }
-			 if(!$('#guest').val()) {
+			 if(!$('#which').val()) {
                 var error = true;
                 $('#guest').addClass("error_input");
             }else{
                 $('#guest').removeClass("error_input");
             }
-           if(!$('#attend').val()) {
+            if(!$('#guest').val()) {
                 var error = true;
                 $('#attend').addClass("error_input");
             }else{
@@ -52,7 +45,7 @@
                     //Check the result set from email.php file.
                     if(result == 'sent'){
                         //If the email is sent successfully, remove the submit button
-                         $('#submit').remove();
+                        $('#submit').remove();
                         //Display the success message
                         $('#mail_success').fadeIn(500);
                     }else{

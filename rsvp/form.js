@@ -42,7 +42,6 @@ $(function () {
 
         $.ajax({
             type: "POST",
-            // url: 'rsvp/handler.php',
             url: 'writefile.php',
             data: $form.serialize(),
             success: after_form_submitted,
