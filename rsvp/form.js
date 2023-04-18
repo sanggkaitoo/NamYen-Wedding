@@ -48,5 +48,8 @@ $(function () {
             dataType: 'json'
         });
 
+        $('form#rsvp_form').hide();
+        $('#success_message').fadeIn(500);
+
     });
 });
